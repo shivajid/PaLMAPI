@@ -12,7 +12,7 @@ pip install -r requirements.txt
 ## Authenticate
 
 ```
-gcloud auth appplication-default login
+gcloud auth application-default login
 ```
 
 ## Run the App
