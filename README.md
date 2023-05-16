@@ -1,5 +1,6 @@
-# PaLMAPI
-This repo has examples of interacting with the PaLM API
+# Vertex PaLM API
+This repo has examples of interacting with the PaLM API. 
+We use the python streamlit library to interact with the API.
 
 ## Install
 
