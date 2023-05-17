@@ -1,6 +1,6 @@
 # Vertex PaLM API
 This repo has examples of interacting with the PaLM API. 
-We use the python streamlit library to interact with the API.
+I use the python streamlit library to interact with the API.
 
 ## Install
 
@@ -15,6 +15,13 @@ pip install -r requirements.txt
 ```
 gcloud auth application-default login
 ```
+## Update PROJECT_ID
+
+Edit the streamlit_app/TaskLLM.py file to update the PROJECT_ID
+```
+PROJECT_ID= "demogct2022"
+```
+
 
 ## Run the App
 

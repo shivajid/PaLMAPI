@@ -43,3 +43,1515 @@ Traceback (most recent call last):
   File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
     raise exceptions.from_grpc_error(exc) from exc
 google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-16 22:22:31.766 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:74.125.124.95:443 {grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.", grpc_status:8, created_time:"2023-05-16T22:22:31.764264564+00:00"}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 69, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 37, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-16 22:26:12.855 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:142.250.148.95:443 {created_time:"2023-05-16T22:26:12.852302473+00:00", grpc_status:8, grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 69, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 37, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-16 22:29:21.342 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:209.85.234.95:443 {created_time:"2023-05-16T22:29:21.338950379+00:00", grpc_status:8, grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 69, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 37, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-16 22:35:18.968 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:172.217.212.95:443 {grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.", grpc_status:8, created_time:"2023-05-16T22:35:18.965481488+00:00"}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-16 22:39:22.753 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:74.125.70.95:443 {created_time:"2023-05-16T22:39:22.750679819+00:00", grpc_status:8, grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-16 22:49:28.698 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:64.233.183.95:443 {grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.", grpc_status:8, created_time:"2023-05-16T22:49:28.69481181+00:00"}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-16 22:50:24.991 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:173.194.196.95:443 {grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.", grpc_status:8, created_time:"2023-05-16T22:50:24.989504062+00:00"}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-16 22:53:31.967 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:142.250.128.95:443 {grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.", grpc_status:8, created_time:"2023-05-16T22:53:31.965429316+00:00"}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-16 23:26:19.231 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:142.251.161.95:443 {created_time:"2023-05-16T23:26:19.228142904+00:00", grpc_status:8, grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 00:08:48.446 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:142.250.1.95:443 {created_time:"2023-05-17T00:08:48.443169003+00:00", grpc_status:8, grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 00:12:29.851 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:173.194.196.95:443 {grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.", grpc_status:8, created_time:"2023-05-17T00:12:29.847254214+00:00"}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 00:27:23.424 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:74.125.69.95:443 {created_time:"2023-05-17T00:27:23.422203215+00:00", grpc_status:8, grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 03:52:30.655 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:142.250.1.95:443 {grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.", grpc_status:8, created_time:"2023-05-17T03:52:30.651293099+00:00"}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 03:56:14.483 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:74.125.201.95:443 {grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.", grpc_status:8, created_time:"2023-05-17T03:56:14.481856716+00:00"}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 03:59:58.313 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:108.177.120.95:443 {grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.", grpc_status:8, created_time:"2023-05-17T03:59:58.310020177+00:00"}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 04:05:02.830 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:108.177.121.95:443 {created_time:"2023-05-17T04:05:02.828422318+00:00", grpc_status:8, grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 04:06:17.057 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:74.125.201.95:443 {created_time:"2023-05-17T04:06:17.053502755+00:00", grpc_status:8, grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 04:09:10.311 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:142.251.172.95:443 {grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.", grpc_status:8, created_time:"2023-05-17T04:09:10.300091055+00:00"}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 04:18:25.774 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:209.85.147.95:443 {grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.", grpc_status:8, created_time:"2023-05-17T04:18:25.771666275+00:00"}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 04:23:05.384 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:108.177.111.95:443 {grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.", grpc_status:8, created_time:"2023-05-17T04:23:05.380078094+00:00"}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 04:34:18.536 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:142.251.161.95:443 {created_time:"2023-05-17T04:34:18.531857914+00:00", grpc_status:8, grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 04:37:07.340 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:209.85.146.95:443 {created_time:"2023-05-17T04:37:07.337639128+00:00", grpc_status:8, grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 04:44:31.035 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:142.251.172.95:443 {created_time:"2023-05-17T04:44:31.033147336+00:00", grpc_status:8, grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 04:49:09.959 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:209.85.200.95:443 {created_time:"2023-05-17T04:49:09.956004353+00:00", grpc_status:8, grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 04:52:30.445 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:74.125.124.95:443 {created_time:"2023-05-17T04:52:30.442288253+00:00", grpc_status:8, grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 04:56:15.153 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:142.250.1.95:443 {created_time:"2023-05-17T04:56:15.150584063+00:00", grpc_status:8, grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 05:07:19.449 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:142.251.120.95:443 {grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.", grpc_status:8, created_time:"2023-05-17T05:07:19.444197865+00:00"}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 05:11:02.039 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:142.251.171.95:443 {created_time:"2023-05-17T05:11:02.036523556+00:00", grpc_status:8, grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 05:18:25.172 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:64.233.182.95:443 {grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.", grpc_status:8, created_time:"2023-05-17T05:18:25.168870072+00:00"}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 05:22:06.600 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:209.85.145.95:443 {created_time:"2023-05-17T05:22:06.596247406+00:00", grpc_status:8, grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 05:30:21.150 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:173.194.197.95:443 {grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.", grpc_status:8, created_time:"2023-05-17T05:30:21.147884939+00:00"}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 05:34:19.485 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:142.250.103.95:443 {created_time:"2023-05-17T05:34:19.48172134+00:00", grpc_status:8, grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 05:38:04.474 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:108.177.121.95:443 {created_time:"2023-05-17T05:38:04.471506544+00:00", grpc_status:8, grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 05:45:28.405 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:64.233.183.95:443 {created_time:"2023-05-17T05:45:28.40365913+00:00", grpc_status:8, grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 05:48:13.815 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:172.253.114.95:443 {created_time:"2023-05-17T05:48:13.812974969+00:00", grpc_status:8, grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 05:52:03.103 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:173.194.192.95:443 {grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.", grpc_status:8, created_time:"2023-05-17T05:52:03.099644515+00:00"}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 05:53:27.162 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:108.177.112.95:443 {created_time:"2023-05-17T05:53:27.160273152+00:00", grpc_status:8, grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 06:17:14.199 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:74.125.70.95:443 {created_time:"2023-05-17T06:17:14.195189615+00:00", grpc_status:8, grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 06:39:25.579 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:108.177.111.95:443 {created_time:"2023-05-17T06:39:25.574945332+00:00", grpc_status:8, grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 06:50:30.019 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:209.85.145.95:443 {grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.", grpc_status:8, created_time:"2023-05-17T06:50:30.015899462+00:00"}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 12:40:09.708 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:209.85.145.95:443 {created_time:"2023-05-17T12:40:09.704131532+00:00", grpc_status:8, grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
+2023-05-17 13:08:31.216 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 72, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 1030, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/grpc/_channel.py", line 910, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:142.250.1.95:443 {created_time:"2023-05-17T13:08:31.212195693+00:00", grpc_status:8, grpc_message:"Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 71, in <module>
+    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+  File "/home/admin_shivajid_altostrat_com/proshanta/PaLMAPI/streamlit_app/TextLLM.py", line 39, in predict_large_language_model_sample
+    response = model.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 268, in predict
+    return self._batch_predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/private_preview/language_models/language_models.py", line 304, in _batch_predict
+    prediction_response = self._endpoint.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform/models.py", line 1546, in predict
+    prediction_response = self._prediction_client.predict(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/cloud/aiplatform_v1/services/prediction_service/client.py", line 602, in predict
+    response = rpc(
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/gapic_v1/method.py", line 113, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/google/api_core/grpc_helpers.py", line 74, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 Online prediction request quota exceeded for text-bison. Please try again later with backoff. If you still experience errors, contact Vertex AI.
