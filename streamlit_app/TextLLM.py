@@ -66,16 +66,23 @@ temp = st.session_state.temp
 if content is None or content == "":
  content = defaultstr
 
+resp = None
 with st.spinner("Please wait.. AI at works!!"):
+  try:
    start_time = timeit.default_timer()
    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
    elapsed = timeit.default_timer() - start_time
+  except Exception as e:
+      st.write("Exception{}".format(e))
+      st.write("Wait before trying again, Resource exhauted")
+if resp is not None:
+ st.write("Elapsed time:", round(elapsed,2), " seconds")
+ predictions = resp.text
 
-st.write("Elapsed time:", round(elapsed,2), " seconds")
-predictions = resp.text
-
-#for prediction in predictions:
-#    print(" prediction:", prediction["content"])
-#    st.write(prediction["content"])
-st.write(predictions)
-
+ st.write(predictions)
+ st.write('***')
+ st.write(' Responsible AI Safety Attributes ')
+ st.write('***')
+ safety_categories = resp._prediction_response[0][0]['safetyAttributes']
+ st.write(safety_categories)
+ st.write('***')
