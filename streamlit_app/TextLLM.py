@@ -46,7 +46,8 @@ def predict_large_language_model_sample(
 
 
 #Build the UI Skeleton
-defaultstr = "How to build safe portfolio on Etsy"
+#defaultstr = "How to build safe portfolio on Etsy"
+defaultstr = ""
 st.text_area("Enter your Prompt:", key="name", height=200, value=defaultstr)
 
 with st.sidebar:
@@ -62,12 +63,15 @@ top_k = st.session_state.topk
 max_tok = st.session_state.tok
 temp = st.session_state.temp
 
-
+skip = True
 if content is None or content == "":
  content = defaultstr
-
+else:
+ skip = False
 resp = None
-with st.spinner("Please wait.. AI at works!!"):
+#st.write("Skip:", skip)
+if skip == False:
+ with st.spinner("Please wait.. AI at works!!"):
   try:
    start_time = timeit.default_timer()
    resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
@@ -75,14 +79,14 @@ with st.spinner("Please wait.. AI at works!!"):
   except Exception as e:
       st.write("Exception{}".format(e))
       st.write("Wait before trying again, Resource exhauted")
-if resp is not None:
- st.write("Elapsed time:", round(elapsed,2), " seconds")
- predictions = resp.text
+ if resp is not None:
+  st.write("Elapsed time:", round(elapsed,2), " seconds")
+  predictions = resp.text
 
- st.write(predictions)
- st.write('***')
- st.write(' Responsible AI Safety Attributes ')
- st.write('***')
- safety_categories = resp._prediction_response[0][0]['safetyAttributes']
- st.write(safety_categories)
- st.write('***')
+  st.write(predictions)
+  st.write('***')
+  st.write(' Responsible AI Safety Attributes ')
+  st.write('***')
+  safety_categories = resp._prediction_response[0][0]['safetyAttributes']
+  st.write(safety_categories)
+  st.write('***')
