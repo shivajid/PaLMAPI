@@ -42,7 +42,7 @@ Navigate to the URL to test the app!!
 
 Have Fun!!
 
-## TroubleShooting
+## Troubleshooting
 
 You may see an error with protobuf. If you try and uninstall and reinstall streamlit, the issue goes away. There is a clash in the protobuf library that is shipped with google cloud and streamlit.
 
