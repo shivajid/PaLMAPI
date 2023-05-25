@@ -7,7 +7,7 @@ I use the python streamlit library to interact with the API.
 Install the code dependencies
 
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## Authenticate
@@ -42,5 +42,8 @@ Navigate to the URL to test the app!!
 
 Have Fun!!
 
+## TroubleShooting
+
+You may see an error with protobuf. If you try and uninstall and reinstall streamlit, the issue goes away. There is a clash in the protobuf library that is shipped with google cloud and streamlit.
 
 
