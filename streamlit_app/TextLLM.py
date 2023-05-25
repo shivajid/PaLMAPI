@@ -74,7 +74,7 @@ if skip == False:
  with st.spinner("Please wait.. AI at works!!"):
   try:
    start_time = timeit.default_timer()
-   resp = predict_large_language_model_sample("demogct2022", "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
+   resp = predict_large_language_model_sample(PROJECT_ID, "text-bison@001", temp, max_tok, top_p, top_k,  content, "us-central1")
    elapsed = timeit.default_timer() - start_time
   except Exception as e:
       st.write("Exception{}".format(e))
