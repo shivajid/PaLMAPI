@@ -2,12 +2,12 @@ import streamlit as st
 import re
 import json
 
-
-es_project_id = "ucs-fishfood-6"
-es_location = "global"                    
-search_engine_id = "alphapet_1684629621521"
-serving_config_id = "default_config"          
-search_query = "What is Google's revenue in 2022?"
+#Set these variable from your search engine
+es_project_id = ""
+es_location = ""                    
+search_engine_id = ""
+serving_config_id = ""          
+search_query = "Default Query"
 
 
 from google.cloud import discoveryengine_v1beta as genappbuilder

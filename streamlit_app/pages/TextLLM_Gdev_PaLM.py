@@ -14,8 +14,8 @@ import google.generativeai as palm
 
 #Set Project Variables
 
-
-palm.configure(api_key='AIzaSyDfDxlkK7_6IHpjbbs5DeP3kJtAAkG0HmQ')
+#Set your API Key
+palm.configure(api_key='')
 
 
 
