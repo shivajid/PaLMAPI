@@ -25,3 +25,4 @@ es_location = ""
 search_engine_id = ""
 serving_config_id = "" 
 ```
+You can get the above values from the API Integrations Page
