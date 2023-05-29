@@ -17,7 +17,7 @@ gcloud auth application-default login
 ```
 ## Update PROJECT_ID
 
-Edit the streamlit_app/TaskLLM.py file to update the PROJECT_ID
+Edit the TaskLLM.py file to update the PROJECT_ID
 ```
 PROJECT_ID= "demogct2022"
 ```
@@ -25,7 +25,7 @@ PROJECT_ID= "demogct2022"
 
 ## Run the App
 
-From the streamlit_app folder run the following command
+
 ```
 streamlit run TextLLM.py
 ```
