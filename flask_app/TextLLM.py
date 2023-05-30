@@ -12,7 +12,7 @@ import vertexai
 from vertexai.preview.language_models import TextGenerationModel
 
 #Set Project Variables
-PROJECT_ID= "demogct2022"
+PROJECT_ID= ""
 model_name = "text-bison@001"
 location = "us-central1"
 
