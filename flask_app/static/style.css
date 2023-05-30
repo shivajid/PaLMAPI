@@ -1,0 +1,46 @@
+*{
+	background-color: black;
+	color: white;
+}
+
+h2{
+ color: white;
+ margin-left: 300px;
+ font-style: Helvetica, sans-serif;
+ font-size: 16px;
+ padding: 15px ;
+  
+}
+textarea {
+    border-radius: 25px;
+    margin-left: 300px;
+    color:white;
+    padding: 22px;
+}
+p{
+  margin-top: 30px;
+  margin-left: 300px;  
+  text-indent: 30px;
+  max-width: 800px;
+  min-width: 100px;
+  background-color: Gray;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+a{
+  background-color: Gray;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  letter-spacing: normal;
+}
+
+button{
+   margin-top: 30px;
+   margin-left: 700px;
+   font-size: 15px;
+   padding: 10px 24px;
+   border-radius: 12px;
+   background-color: Gray;
+   font-family: Helevitca, sans-serif;
+}

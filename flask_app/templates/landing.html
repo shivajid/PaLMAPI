@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" pan-favicon href="data:image/svg+xml;charset=UTF-8;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpdD0iIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0IiBmb2N1c2FibGU9ImZhbHNlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xNS4yNzQgNy42ODNsLjc2OC4wMTUgMi4wOTQtMi4wOS4xMDQtLjg4M2E5LjM3OSA5LjM3OSAwIDAwLTE1LjI5NyA0LjU2Yy4yMTYtLjE1OC43MDctLjA0LjcwNy0uMDRsNC4xNzQtLjY4OHMuMjE2LS4zNTMuMzIyLS4zMzFhNS4yMDMgNS4yMDMgMCAwMTcuMTItLjU0M2guMDA4eiIgZmlsbD0iI0VBNDMzNSI+PC9wYXRoPjxwYXRoIGQ9Ik0yMS4wNjQgOS4yODlhOS40MDkgOS40MDkgMCAwMC0yLjgzNC00LjU2N2wtMi45NDYgMi45NDZhNS4yMDQgNS4yMDQgMCAwMTEuOTQ1IDQuMDU5di41MzhhMi42MSAyLjYxIDAgMTEwIDUuMjE3aC01LjIzbC0uNTIuNTI2djMuMTI1bC41Mi41Mmg1LjIxN0E2Ljc3OCA2Ljc3OCAwIDAwMjEuMDY0IDkuMjl6IiBmaWxsPSIjNDI4NUY0Ij48L3BhdGg+PHBhdGggZD0iTTYuNzgxIDIxLjY1NEgxMlYxNy40OEg2Ljc4YTIuNTg3IDIuNTg3IDAgMDEtMS4wNzUtLjI0NmwtLjc1MS4yMzEtMi4wOSAyLjEtLjE4MS43MDZhNi43NDUgNi43NDUgMCAwMDQuMDk3IDEuMzgzeiIgZmlsbD0iIzM0QTg1MyI+PC9wYXRoPjxwYXRoIGQ9Ik02Ljc4MSA4LjA5YTYuNzc5IDYuNzc5IDAgMDAtNC4wOTUgMTIuMTgxbDMuMDI1LTMuMDI1YTIuNjA3IDIuNjA3IDAgMTEzLjQzNy0zLjQzN2wzLjAzNS0zLjAzNUE2Ljc3NiA2Ljc3NiAwIDAwNi43OCA4LjA5MXoiIGZpbGw9IiNGQkJDMDQiPjwvcGF0aD48L3N2Zz4=" />
+<!-- <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico?v=ec617d715197"> -->
+<title>Google PaLM2 API Demo</title>
+<link href={{url_for('static', filename='style.css')}} rel="stylesheet"/>
+<script>
+// Get the input field
+var input = document.getElementById("promptid");
+
+// Execute a function when the user presses a key on the keyboard
+input.addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("myButton").click();
+  }
+});
+
+// do something
+function myFunction(){
+var xhttp = new XMLHttpRequest();
+const start = performance.now();
+
+let element = document.getElementById("busyz");
+let hidden = element.getAttribute("hidden");
+let pelement = document.getElementById("demo")
+let telement = document.getElementById("timer")
+telement.setAttribute("hidden","hidden")
+pelement.setAttribute("hidden","hidden")
+element.removeAttribute("hidden")
+
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       // Typical action to be performed when the document is ready:
+        //alert(this.responseText);
+        element.setAttribute("hidden", "hidden");
+        //document.getElementById("busyid").style.background-color="Gray";
+        document.getElementById("demo").innerHTML = this.responseText;
+        pelement.removeAttribute("hidden");
+        const end = performance.now();
+        var  elapsed = end - start;
+        elapsed = (elapsed/1000).toFixed(2);
+        document.getElementById("timer").innerHTML= "<a style='background-color: green'>Elapsed Time: "+ elapsed +" sec. </a>"
+        telement.removeAttribute("hidden")
+    }
+};
+
+const inputField = document.getElementById("promptid");
+const value1 = inputField.value;
+xhttp.open("GET","/process?prompt="+value1,true);
+xhttp.send();
+
+}
+</script>
+</head>
+<body>
+	<div><p style="background-color:black;font-size:30px;font-family:Helevetica, sans-serif; text-align:center">Welcome to Google Cloud PaLM API</p></div>
+	<div id="heading">
+
+<h2>Enter the prompt:</h2></div>
+<div id="sec1">
+<textarea id="promptid" name="promptarea" rows="11" cols="100"></textarea>
+<br/>
+<button id="myButton" onclick="myFunction()">Click me</button>
+
+<div id="busyz" hidden="hidden">
+<p id="busyid"><a id="text"> Busy.... Processing </a></p> 
+<!-- <img id="busyic" src="{{url_for('static', filename='busy.png')}}" align="middle" />
+	     -->
+</div>
+</div>
+
+<div id="answer">
+	<p id="timer" style="background-color: green;" hidden="hidden"></p>
+	<p id="demo" hidden="hidden"></p>
+</div>
+
+</body>
+</html>
