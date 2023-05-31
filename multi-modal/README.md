@@ -2,7 +2,7 @@
 
 This example is for multi modal search with ImageBind and DocArray
 
-# Install ImageBind
+### Install ImageBind
 
 Note: ImageBind Fails with cartoapi on Debian
 
