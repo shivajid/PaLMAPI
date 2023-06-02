@@ -2,18 +2,29 @@ import streamlit as st
 import re
 import json
 
-#Set these variable from your search engine
-es_project_id = ""
-es_location = ""                    
-search_engine_id = ""
-serving_config_id = ""          
-search_query = "Default Query"
+
+es_project_id = "ucs-fishfood-6"
+es_location = "global"                    
+search_engine_id = "alphapet_1684629621521"
+serving_config_id = "default_config"          
+search_query = "What is Google's revenue in 2022?"
 
 
 from google.cloud import discoveryengine_v1beta as genappbuilder
 
 search_engine_id = "alphapet_1684629621521"
 serving_config_id ="default_search_widget_config"
+
+@st.cache_resource
+def _get_serving_config(project_id, location, search_engine_id, serving_config_id):
+    client = genappbuilder.SearchServiceClient()
+    serving_config_val = client.serving_config_path(
+                      project=project_id,
+                      location=location,
+                      data_store=search_engine_id,
+                      serving_config= serving_config_id
+                      )
+    return client, serving_config_val 
 
 
 def search_sample(
@@ -24,16 +35,10 @@ def search_sample(
     search_query: str,
 ) -> None:
     # Create a client
-    client = genappbuilder.SearchServiceClient()
 
     # The full resource name of the search engine serving config
     # e.g. projects/{project_id}/locations/{location}
-    serving_config = client.serving_config_path(
-        project=project_id,
-        location=location,
-        data_store=search_engine_id,
-        serving_config=serving_config_id,
-    )
+    client, serving_config = _get_serving_config(project_id, location, search_engine_id, serving_config_id)
 
     request = genappbuilder.SearchRequest(
         serving_config=serving_config,
