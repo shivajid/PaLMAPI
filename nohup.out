@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/admin_shivajid_altostrat_com/.local/bin/waitress-serve", line 8, in <module>
+    sys.exit(run())
+  File "/home/admin_shivajid_altostrat_com/.local/lib/python3.9/site-packages/waitress/runner.py", line 293, in run
+    app = app()
+TypeError: 'module' object is not callable

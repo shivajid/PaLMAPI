@@ -17,6 +17,11 @@ PROJECT_ID= "demogct2022"
 model_name = "text-bison@001"
 location = "us-central1"
 
+@st.cache_resource(show_spinner=False)
+def get_model(PROJECT_ID, location, model_name):
+  vertexai.init(project=PROJECT_ID, location=location)
+  model = TextGenerationModel.from_pretrained(model_name)
+  return model
 
 
 
@@ -30,12 +35,13 @@ def predict_large_language_model_sample(
     content: str,
     location: str = "us-central1",
     tuned_model_name: str = "",
-    ) :
+    ): 
     """Predict using a Large Language Model."""
-    vertexai.init(project=project_id, location=location)
-    model = TextGenerationModel.from_pretrained(model_name)
-    if tuned_model_name:
-      model = model.get_tuned_model(tuned_model_name)
+    #vertexai.init(project=project_id, location=location)
+    #model = TextGenerationModel.from_pretrained(model_name)
+    #if tuned_model_name:
+    #  model = model.get_tuned_model(tuned_model_name)
+    model = get_model(project_id, location, model_name)
     response = model.predict(
         content,
         temperature=temperature,
