@@ -58,7 +58,7 @@ docker tag palm-streamlit us-central1-docker.pkg.dev/$PROJECT_ID/palm-streamlit/
  
 Change the port number to port you would like to use
  ```
- gcloud run deploy palm-demo --image us-central1-docker.pkg.dev/demogct2022/palm-streamlit/palm-streamlit --region=us-central1 --port=8503  --allow-unauthenticated
+ gcloud run deploy palm-demo --image us-central1-docker.pkg.dev/$PROJECT/palm-streamlit/palm-streamlit --region=us-central1 --port=8503  --allow-unauthenticated
  ```
  
  Check the console for any Errors
