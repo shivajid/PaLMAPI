@@ -2,3 +2,4 @@ google-cloud-aiplatform
 google-cloud-happybase==0.33.0
 google-cloud-bigtable
 streamlit
+google-generativeai
