@@ -20,3 +20,7 @@ pip install docarray
 ```
 
 Next you can execute the Notebook
+
+## Mid Journey Multi Modal Application
+
+Dataset used - https://www.kaggle.com/datasets/ldmtwo/midjourney-250k-csv
