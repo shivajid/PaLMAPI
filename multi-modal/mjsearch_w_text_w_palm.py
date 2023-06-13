@@ -4,6 +4,8 @@ import pandas as pd
 import timeit
 import requests
 import re
+import PIL
+
 
 import vertexai
 from vertexai.preview.language_models import TextGenerationModel,TextEmbeddingModel
@@ -19,8 +21,23 @@ import pinecone
 from google.oauth2 import service_account
 from google.cloud import aiplatform_v1beta1
 
+icon = "rndcat.png"
+
+st.set_page_config(layout="wide", page_title="multi modal search", page_icon=icon )
 
 # Instantiate model
+
+if "audiofname" not in st.session_state:
+ st.session_state['audiofname'] = ""
+if "inp_text" not in st.session_state:
+ st.session_state["inp_text"] = ""
+
+
+if "img" not in st.session_state:
+ st.session_state["img"] = ""
+
+
+
 
 @st.cache_resource(show_spinner=False)
 def get_pnc_index():
@@ -38,10 +55,33 @@ def get_model():
 
 @st.cache_resource(show_spinner=False)
 def get_metadata():
- metadata_list_txt_uptd = None
+ metadata_list_txt_uptd = ""
  with open('/home/admin_shivajid_altostrat_com/metadata_list_txt_uptd.jsonl', 'rb') as f:
   metadata_list_txt_uptd = pickle.load(f)
  return metadata_list_txt_uptd
+
+def get_image_query_vector(device, model, image_list):
+    sample_embedding = None
+    sample_input = {
+            ModalityType.VISION: data.load_and_transform_vision_data(image_list, device)
+            }
+    with torch.no_grad():
+        sample_embedding = model(sample_input)
+    test_vector = sample_embedding[ModalityType.VISION].cpu().detach().numpy()
+    query_vector = test_vector[0].tolist()
+    return query_vector
+
+def get_audio_query_vector(device, model, audio_list):
+    sample_embedding = None
+    #st.write(audio_list)
+    sample_input = {
+        ModalityType.AUDIO: data.load_and_transform_audio_data(audio_list, device)
+        }
+    with torch.no_grad():
+        sample_embedding =  model(sample_input)
+    test_vector = sample_embedding[ModalityType.AUDIO].cpu().detach().numpy()
+    query_vector = test_vector[0].tolist()
+    return query_vector
 
 def get_test_embedding(device, model, text_list):
  test_embeddings=None 
@@ -99,11 +139,20 @@ def get_resources():
  metadata = get_metadata()
  return  device, model, index, metadata
 
-def _perform_search(inp_text):
+def _perform_search(inp, qtype="text"):
  device, model, index, metadata = get_resources()
- text_list = [inp_text]
- test_embedding = get_test_embedding(device, model,text_list)
- test_vector = _get_embeddings_array(test_embedding)
+ #print(f"In _perform search {qtype} {inp}")
+ test_vector = []
+ if qtype == "text":
+  text_list = [inp]
+  test_embedding = get_test_embedding(device, model,text_list)
+  test_vector = _get_embeddings_array(test_embedding)
+ elif qtype == "audio":
+  audio_list = [inp]
+  test_vector = get_audio_query_vector(device, model, audio_list)
+ elif qtype == "image":
+  image_list = [inp]
+  test_vector = get_image_query_vector(device, model, image_list)
  match_ids = _get_match_ids(index, test_vector)
  results = []
  for idstr in match_ids:
@@ -148,6 +197,11 @@ def get_cache_creds():
        }
   return credentials, client_options
 
+
+
+
+
+
 def findneighbor_sample(val):
   # The AI Platform services require regional API endpoints.
   #scopes = ["https://www.googleapis.com/auth/cloud-platform"]
@@ -186,7 +240,7 @@ def findneighbor_sample(val):
   return response
 
 
-def imgbind_findneighbor_sample( val):
+def imgbind_txt_findneighbor_sample( val):
   
  request, vertex_ai_client = _get_ann_config()
  dp1 = aiplatform_v1beta1.IndexDatapoint(
@@ -223,6 +277,13 @@ def _get_text_matches(val):
   vals = get_matching_texts(ids)
   return vals
 
+def _get_imgbind_text_matches(val):
+  resp = imgbind_txt_findneighbor_sample(val)
+  ids = get_match_id_embedding(resp)
+  #print(ids)
+  vals = get_matching_texts(ids)
+  return vals
+
 def get_txt_embedding(val):
     model = _get_text_resources()
     query = ["machines of the future"]
@@ -236,62 +297,131 @@ def remove_urls(text):
   text = re.sub(pattern, '', text)
   return text
 
+
+@st.cache_resource(show_spinner=False)
+def _get_audio_list():
+    audiolist = ["",".assets/dog_audio.wav", ".assets/taunt.wav", ".assets/StarWars3.wav", ".assets/Chorus.wav", ".assets/Sports.wav", ".assets/Adver.wav",".assets/ImperialMarch60.wav",".assets/Pop1.wav",".assets/hindimusic.wav", ".assets/boneym.wav", ".assets/harley.wav",".assets/barack.wav" ]
+    return audiolist
+
 ## Let's build the UI
-st.set_page_config(layout="wide")
-colx, coly, colz = st.columns([0.1,0.7 , 0.2])
+
+colx, coly, colz = st.columns([0.1,0.5 , 0.2])
 with colx:
-    st.write('')
+    #st.write('')
+    st.image('/home/admin_shivajid_altostrat_com/ImageBind/rndcat.png', width=180)
 with coly:
     #st.warning('The images shown in this page are AI generated in Art form,collected from the internet. Art can be strange, calming, intriguing and disturbing.', icon="⚠️")
     
-    st.markdown("### Multi Modal Image Search  &nbsp;&nbsp;&nbsp;&nbsp;      [Embedding Map](https://atlas.nomic.ai/map/ae1ed3bf-abd3-4a42-9e90-7aacefbb94db/a14478fd-d527-41c4-9f7b-a0251e271d36)")
+    #st.markdown("## Multi Modal Image Search  &nbsp;&nbsp;&nbsp;&nbsp;      [Embedding Map](https://atlas.nomic.ai/map/ae1ed3bf-abd3-4a42-9e90-7aacefbb94db/a14478fd-d527-41c4-9f7b-a0251e271d36)")
+    st.markdown("## Multi Modal Search  &nbsp;&nbsp;&nbsp;&nbsp;")
+  
+    st.write("This is a multi modal search app based on Mid Journey's public dataset. The app is built on 114k of the 250K images. You can search for images and prompts using text description,audio clips and an image.") 
     #st.markdown("##### [Embedding map](https://atlas.nomic.ai/map/ae1ed3bf-abd3-4a42-9e90-7aacefbb94db/a14478fd-d527-41c4-9f7b-a0251e271d36)")
     #st.write(":exclamation: :red[There could be some disturbing Images as these are machine generated images by AI]")
 
 #st.markdown("Enter a search string,describe the image you are looking for")
-with colz:
-    st.write("")
-
+   
 with coly:
-    input_txt = st.text_input(":silver[Imagine....]",  key = "search_txt", value="Porsche", help="Enter a text or idea. The text is used  search matching images on an image index. A second search for the matching prompts is done on prompt index. This shows the power of semantic multi modal search")
+
+    texttab, audiotab, imagetab = st.tabs(["Text Search", ":bold[ Audio Search]", "Image Search"])
+    with texttab:
+      input_txt = st.text_input(":silver[Search with Prompts]",  key = "search_txt", value="", help="Enter a text or idea. The text is used  search matching images on an image index. A second search for the matching prompts is done on prompt indexi.")
+    with audiotab:
+     audiolist = _get_audio_list()
+     st.write("Select an audio clip and find images and text in the similar embedding space")
+     fname = st.selectbox("Select and audio clip.", audiolist)
+     if fname != "":
+      st.audio(fname)
+    with imagetab:
+      uploadedfname = None
+      uploaded_file = st.file_uploader("Choose a file", type=['png', 'jpg'])
+      if uploaded_file is not None:
+       uploadedfname = uploaded_file.name
+       uploadedfname = f"tempdata/{uploadedfname}"
+       bytes_data = uploaded_file.getvalue()
+       with open(uploadedfname, "wb") as f:
+          f.write(bytes_data)
+
+with colz:
+    placeholder = st.empty()
+
+    #if uploadedfname != "" and uploadedfname != st.session_state["uploadedimage"]:
+    #    placeholder.image(uploadedfname, width=200)
 
 st.markdown("---")
 
 cola, colb = st.columns([0.7,0.3])
 #col1, col2, col3 = st.columns(3,gap="large")
 
-if input_txt:
- test_vector, results = _perform_search(input_txt)
+if input_txt or fname != "" or uploadedfname:
+ inpval = "" 
+ modality = "text"
+ #if input_txt:
+ #    modality = "text"
+ #    oldstate = 
+ #    inpval = input_txt
+
+ # elif (fname != "") and (oldfname != fname):
+ #     modality = "audio"
+ #     inpval = fname
+ # else:
+ #    modality = "text"
+ #    inpval = input_txt
+
+ oldfname = st.session_state['audiofname']
+ oldinptext = st.session_state["inp_text"]
+ olduploadedimage = st.session_state["img"]
+
+ if (oldfname != fname):
+     inpval = fname
+     st.session_state["audiofname"] = fname
+     modality = "audio"
+     placeholder.empty()
+ elif (oldinptext != input_txt):
+     inpval = input_txt
+     modality = "text"
+     st.session_state["inp_text"] = input_txt
+     placeholder.empty()
+ elif uploadedfname and (olduploadedimage != uploadedfname):
+     inpval = uploadedfname
+     st.session_state["img"] = uploadedfname
+     modality = "image"
+     placeholder.image(uploadedfname, width=200)
  
- with cola:
-  col1, col2, col3 = st.columns(3)
-  counter = 0
-  for val  in results:
-   img_url, prompt = get_images(val)
-   #prompt= prompt.replace('[^a-zA-Z]', '')
-   if counter in [0,3,6,9]:
-    with col1:
+ if inpval != "":
+  test_vector, results = _perform_search(inpval, modality)
+
+  with cola:
+   col1, col2, col3 = st.columns(3)
+   counter = 0
+   for val  in results:
+    img_url, prompt = get_images(val)
+    #prompt= prompt.replace('[^a-zA-Z]', '')
+    if counter in [0,3,6,9]:
+     with col1:
        st.image(img_url )
-   elif counter in [1,4,7,10]:
-    with col2:
+    elif counter in [1,4,7,10]:
+     with col2:
        st.image(img_url)
-   elif counter in [2,5,8,11]:
-    with col3:
+    elif counter in [2,5,8,11]:
+     with col3:
        st.image(img_url)
-   counter = counter +1
+    counter = counter +1
  
- with colb:  
-  st.write("&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Matching Prompts**")
-  #st.markdown("---")
-  text_emb = get_txt_embedding(input_txt)
-  #print(text_emb)
-  matching_texts = _get_text_matches(text_emb)
-  for val in matching_texts:
+  with colb:  
+   st.write("&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Matching Prompts**")
+   if modality == "text":
+    text_emb = get_txt_embedding(input_txt)
+    matching_texts = _get_text_matches(text_emb)
+   else:
+    #Call the IMG BIND Based Embedding Index in VME. As we are using for audio
+    matching_texts = _get_imgbind_text_matches(test_vector)
+
+   for val in matching_texts:
      img_url, prompt = get_images(val)
      #prompt = remove_urls(prompt)
-     #st.markdow("---")
      st.markdown(" ")
      st.text(prompt)
-     #t = f"<div style='background-color: #e6daf7;border-radius: 10px'><span style='color:#0d121c;'>{prompt}</span></span></div>"
-     #st.write(t, unsafe_allow_html=True)
-     #st.markdown("---")
+
+
+st.markdown("Developed by @Shivajid. Explore the Embedding [Map](https://atlas.nomic.ai/map/ae1ed3bf-abd3-4a42-9e90-7aacefbb94db/a14478fd-d527-41c4-9f7b-a0251e271d36) of the dataset on Nomic.ai.")
