@@ -36,7 +36,7 @@ class fileprocessor(beam.DoFn):
 
 
     def get_request_url(slef):
-            request_url = "https://us-vision.googleapis.com/v1/images:annotate?key=AIzaSyBeqW9GAaQvujFEhLtAYFj-3ZgRmSlu3ds"
+            request_url = "https://us-vision.googleapis.com/v1/images:annotate?key=??"
             return request_url
 
     def get_req_json(self,image_path):
